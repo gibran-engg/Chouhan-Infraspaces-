@@ -2,6 +2,7 @@ import { Hero } from "@/components/sections/Hero";
 import { Stats } from "@/components/sections/Stats";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
 import { FeaturedProjects } from "@/components/sections/FeaturedProjects";
+import Testimonials from "@/components/sections/Testimonials";
 import { ProcessSnapshot } from "@/components/sections/ProcessSnapshot";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { Consultation } from "@/components/sections/Consultation";
@@ -14,6 +15,7 @@ export default function HomePage() {
       <Stats />
       <ServicesGrid />
       <FeaturedProjects />
+      <Testimonials />
       <ProcessSnapshot />
       <WhyChooseUs />
       <Consultation />
