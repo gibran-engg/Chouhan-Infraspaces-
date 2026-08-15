@@ -34,3 +34,20 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Large media assets — keep videos local for now
+images/**/*.mp4
+images/**/*.MP4
+images/**/*.mov
+images/**/*.MOV
+images/**/*.avi
+images/**/*.AVI
+images/**/*.mkv
+images/**/*.MKV
+images/**/*.webm
+images/**/*.WEBM
+images/**/*.m4v
+images/**/*.M4V
+
+# Original/raw design assets — kept outside the production repository
+/images/

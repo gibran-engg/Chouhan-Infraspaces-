@@ -5,6 +5,7 @@ export type Service = {
   description: string[];
   included: string[];
   image: string;
+  imageAlt: string;
 };
 
 export const services: Service[] = [
@@ -12,102 +13,76 @@ export const services: Service[] = [
     slug: "interior-design",
     title: "Interior Design",
     shortDescription:
-      "Refined spaces planned around living, working, and lasting value.",
+      "Interior concepts and finish palettes shaped around real rooms, details, and daily use.",
     description: [
-      "Our interior design practice begins with understanding how you live, work, and move through your space. We translate that into layouts, material palettes, and lighting plans that feel intentional — not templated.",
-      "From concept sketches to detailed 3D visualizations, every decision is documented and aligned with your budget before execution begins. We source premium finishes and coordinate with our construction team for seamless delivery.",
-      "Whether it's a luxury residence, a corporate office, or a retail environment, we design spaces that reflect your identity and stand the test of time.",
+      "Chouhan Infraspaces works across residential and commercial interiors, with an emphasis on practical layouts, finish selection, lighting, storage, and built-in details.",
+      "The current project archive shows completed living, dining, bedroom, kitchen, mandir, wardrobe, and media-wall work. The service content is therefore focused on the interior decisions that can be seen in the company's own media.",
     ],
     included: [
-      "Space planning and layout optimization",
-      "3D visualization and mood boards",
-      "Material and finish selection",
-      "Lighting design and fixture specification",
-      "Furniture and decor coordination",
+      "Space planning and room-by-room design direction",
+      "Material, finish, color, and lighting coordination",
+      "Built-in storage, media-wall, and feature-wall detailing",
+      "Furniture and decor coordination where the project scope requires it",
     ],
-    image:
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80",
+    image: "/media/projects/warm-residential-interiors/living-cover.webp",
+    imageAlt:
+      "Completed living room interior with warm wood detailing and layered lighting",
   },
   {
     slug: "construction",
     title: "Construction",
     shortDescription:
-      "Disciplined site execution with premium materials and clean controls.",
+      "Civil and site execution for spaces that need disciplined construction before they become finished work.",
     description: [
-      "Construction at Chouhan Infraspaces is managed with the precision of a design studio and the discipline of a commercial contractor. We handle structural work, MEP coordination, and finishing with in-house supervisors at every stage.",
-      "Our project management framework includes weekly progress reports, quality checkpoints, and transparent cost tracking. No surprises, no scope creep without your approval.",
-      "We work across residential towers, commercial fit-outs, and standalone villas — always with a focus on structural integrity, code compliance, and finish quality that matches the design intent.",
+      "The construction archive includes exterior shell work, plastering, boundary treatment, reinforcement, excavation, and early-stage site preparation.",
+      "This service page presents construction as a core capability without inventing locations, project counts, timelines, or technical certifications that are not present in the repository.",
     ],
     included: [
-      "Structural and civil work",
-      "MEP coordination and execution",
-      "Premium material procurement",
-      "Weekly progress reporting",
-      "Quality assurance at every milestone",
+      "Site preparation and construction-stage coordination",
+      "Exterior shell, plastering, and boundary work",
+      "Reinforcement, slab preparation, and foundation-stage documentation",
+      "Progress documentation that can support client communication",
     ],
-    image:
-      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80",
+    image: "/media/projects/villa-construction-progress/plastered-front.webp",
+    imageAlt: "Villa exterior under construction with plastered front elevation",
   },
   {
-    slug: "renovation",
-    title: "Renovation",
+    slug: "interior-finishing",
+    title: "Interior Finishing",
     shortDescription:
-      "Transforming existing spaces with minimal disruption and maximum impact.",
+      "Wardrobes, panels, lighting, storage, and room details that turn a site into a usable space.",
     description: [
-      "Renovation requires a different mindset — working within existing structures, managing occupied spaces, and delivering transformation without unnecessary downtime. We've refined our process for exactly this.",
-      "We assess structural feasibility, plan phased execution, and protect adjacent areas throughout the build. Our team coordinates with building societies, local authorities, and your schedule.",
-      "From kitchen and bathroom overhauls to full apartment or office renovations, we bring the same design-led approach to every project — with clear timelines and minimal disruption to your daily life.",
+      "A strong portion of the current media library shows finish-stage interior work: wardrobes, wall panels, compact workspaces, bedroom details, and media walls.",
+      "Interior finishing sits between design intent and daily use. The goal is to make surfaces, storage, lights, and edges feel coordinated rather than patched together.",
     ],
     included: [
-      "Structural assessment and feasibility study",
-      "Phased execution planning",
-      "Demolition and debris management",
-      "Electrical and plumbing upgrades",
-      "Final finishing and snagging",
+      "Wardrobe and storage detailing",
+      "Feature panels and wall treatments",
+      "Bedroom, media-wall, and compact workspace finishes",
+      "Final finish coordination before handover",
     ],
-    image:
-      "https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=800&q=80",
+    image: "/media/projects/contemporary-apartment-finishes/bedroom-grey.webp",
+    imageAlt:
+      "Contemporary bedroom with grey wall paneling and integrated lighting",
   },
   {
     slug: "turnkey-solutions",
     title: "Turnkey Solutions",
     shortDescription:
-      "From blueprint to handover — one team, one timeline, zero coordination headaches.",
+      "A single design-to-execution path for clients who want coordinated responsibility.",
     description: [
-      "Turnkey is our flagship offering: one contract, one team, one accountable partner from the first site visit to the final handover. Design, procurement, construction, and finishing — all under one roof.",
-      "You get a single point of contact, a consolidated timeline, and a fixed scope that eliminates the coordination burden of managing multiple vendors. We handle permissions, vendor management, and quality control.",
-      "Ideal for HNI homeowners, corporate offices, and developers who want premium results without the complexity of fragmented vendor management.",
+      "The existing brand line, 'From Design to Delivery', supports a turnkey positioning: design thinking, site execution, and finish coordination handled as one connected project journey.",
+      "Where the scope allows, Chouhan Infraspaces can bring interior design, construction, finishing, and project communication into one accountable workflow.",
     ],
     included: [
-      "End-to-end design and build",
-      "Single contract and accountability",
-      "Consolidated project timeline",
-      "Vendor and permission management",
-      "Complete handover with documentation",
+      "Design-to-execution scope planning",
+      "Interior and construction coordination",
+      "Material and finish alignment across the project",
+      "Handover-focused project closeout",
     ],
-    image:
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
-  },
-  {
-    slug: "maintenance",
-    title: "Maintenance",
-    shortDescription:
-      "Ongoing care to protect your investment and keep spaces performing beautifully.",
-    description: [
-      "A well-built space deserves ongoing care. Our maintenance services cover periodic inspections, preventive repairs, and responsive support for issues that arise after handover.",
-      "We maintain detailed records of your project's materials, finishes, and systems — so when something needs attention, we know exactly what was installed and how to service it correctly.",
-      "Available as annual retainers or on-demand support, our maintenance team ensures your space continues to look and perform as intended for years to come.",
-    ],
-    included: [
-      "Annual maintenance inspections",
-      "Preventive repairs and touch-ups",
-      "Emergency response support",
-      "Material and system documentation",
-      "Dedicated account manager",
-    ],
-    image:
-      "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80",
+    image: "/media/projects/completed-bungalow-exterior/front-gate.webp",
+    imageAlt: "Completed bungalow exterior with gate and boundary wall",
   },
 ];
 
-export const homeServices = services.slice(0, 4);
+export const homeServices = services;
