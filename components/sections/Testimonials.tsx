@@ -12,26 +12,20 @@ const testimonialsData: TestimonialItem[] = [
   {
     id: 1,
     quote: "Chouhan Infraspaces transformed our vision into an architectural reality. Their dedication to premium structural execution is unmatched.",
-    author: "Vikram Malhotra",
-    project: "The Horizon Estate",
-  },
-  {
-    id: 2,
-    quote: "Absolute precision in engineering and timeless spatial layouts. They handled our commercial hub execution flawlessly.",
-    author: "Rajesh Sharma",
-    project: "Apex Business Plaza",
+    author: "Vivanta Resort",
+    project: "Diveagar",
   },
   {
     id: 3,
     quote: "A rare mix of modern efficiency and rich aesthetic design. Transparent communication throughout the development process.",
-    author: "Ananya Iyer",
-    project: "Malabar Heritage Villas",
+    author: "Magar Farmhouse",
+    project: "Diveagar",
   },
   {
     id: 4,
     quote: "From materials selected to project delivery timelines, they exhibit top-tier professionalism. A trusted team for elite spaces.",
-    author: "Priya Patel",
-    project: "Skyline Corporate Suites",
+    author: "Independent Villa",
+    project: "Hashmat Nagar",
   },
 ];
 
