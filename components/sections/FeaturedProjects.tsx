@@ -8,12 +8,12 @@ import { FadeIn } from "@/components/ui/FadeIn";
 
 export function FeaturedProjects() {
   return (
-    <section className="bg-white py-20 md:py-32">
+    <section id="featured-work" className="bg-white py-20 md:py-32">
       <Container>
         <FadeIn>
           <SectionLabel>Portfolio</SectionLabel>
-          <h2 className="font-display text-3xl font-bold text-ink md:text-4xl lg:text-5xl">
-            Recent Work
+          <h2 className="max-w-xl font-display text-4xl font-medium leading-[1.02] tracking-[-0.035em] text-ink md:text-5xl lg:text-6xl">
+            Selected work, made visible.
           </h2>
         </FadeIn>
 
@@ -25,7 +25,7 @@ export function FeaturedProjects() {
               image={project.coverImage}
               href={`/projects/${project.slug}`}
               tag={project.category}
-              meta={project.location}
+              description={project.summary}
               index={i}
             />
           ))}

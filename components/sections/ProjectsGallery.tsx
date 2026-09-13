@@ -26,7 +26,7 @@ export function ProjectsGallery() {
             type="button"
             onClick={() => setActive(cat)}
             className={cn(
-              "rounded-full px-5 py-2 text-sm font-medium transition-colors duration-300",
+              "rounded-full px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.12em] transition-colors duration-300",
               active === cat
                 ? "bg-gold text-ink"
                 : "border border-ink/15 bg-white text-muted hover:border-gold/40 hover:text-ink"
@@ -45,7 +45,7 @@ export function ProjectsGallery() {
             image={project.coverImage}
             href={`/projects/${project.slug}`}
             tag={project.category}
-            meta={`${project.location} · ${project.sqft}`}
+            description={project.summary}
             index={i}
           />
         ))}

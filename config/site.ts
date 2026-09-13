@@ -1,14 +1,14 @@
 export const siteConfig = {
     name: "Chouhan Infraspaces",
-    tagline: "abc",
+    tagline: "Design, construction & considered interiors",
   
-    phone: "abc",
-    phoneLink: "tel:abc",
+    phone: "",
+    phoneLink: "",
   
     email: "",
     emailLink: "",
   
-    whatsappLink: "https://wa.me/aabc",
+    whatsappLink: "",
   
     address: "",
     mapEmbedUrl: "",
@@ -22,7 +22,7 @@ export const siteConfig = {
   
     navLinks: [
       { label: "Home", href: "/" },
-      { label: "About", href: "/about" },
+      { label: "Approach", href: "/process" },
       { label: "Services", href: "/services" },
       { label: "Projects", href: "/projects" },
       { label: "Contact", href: "/contact" },

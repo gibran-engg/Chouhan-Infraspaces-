@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Phone, ArrowRight } from "lucide-react";
+import { Menu, X, ArrowRight } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
@@ -30,34 +30,32 @@ export function Navbar() {
     <header
       className={cn(
         "fixed left-0 right-0 top-0 z-50 transition-all duration-500",
-        solid
-          ? "bg-cream/95 shadow-sm backdrop-blur-md"
-          : "bg-transparent"
+        solid ? "border-b border-ink/10 bg-cream/95 shadow-sm backdrop-blur-md" : "bg-transparent"
       )}
     >
-      <div className="mx-auto flex max-w-content items-center justify-between px-6 py-4 lg:px-12">
-        <Link href="/" className="flex items-center gap-3 text-ink">
-          <span className="flex h-10 w-10 items-center justify-center rounded-sm bg-gold font-display text-lg font-bold text-white">
+      <div className="mx-auto flex h-[76px] max-w-content items-center justify-between px-5 sm:px-8 lg:h-[82px] lg:px-12">
+        <Link href="/" className={cn("flex items-center gap-3", solid ? "text-ink" : "text-white")}>
+          <span className="flex h-11 w-11 items-center justify-center border border-gold bg-gold font-display text-lg font-semibold text-white shadow-[0_5px_14px_rgba(0,0,0,0.18)]">
             C
           </span>
           <span>
             <span className="block font-display text-lg font-bold leading-none">
               Chouhan
             </span>
-            <span className="mt-1 block text-[10px] uppercase tracking-[0.38em] text-muted">
+            <span className={cn("mt-1 block text-[9px] uppercase tracking-[0.38em]", solid ? "text-muted" : "text-white/65")}>
               Infraspaces
             </span>
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav className="hidden items-center gap-7 xl:gap-9 lg:flex">
           {siteConfig.navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               className={cn(
-                "text-sm font-medium transition-colors hover:text-gold",
-                pathname === link.href ? "text-gold" : "text-ink"
+                "relative py-2 text-sm font-medium transition-colors hover:text-gold after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-gold after:transition-all after:duration-300 hover:after:w-full",
+                pathname === link.href ? "text-gold" : solid ? "text-ink" : "text-white/90"
               )}
             >
               {link.label}
@@ -66,13 +64,6 @@ export function Navbar() {
         </nav>
 
         <div className="hidden items-center gap-6 lg:flex">
-          <a
-            href={siteConfig.phoneLink}
-            className="flex items-center gap-2 text-sm font-medium text-ink hover:text-gold"
-          >
-            <Phone size={16} />
-            {siteConfig.phone}
-          </a>
           <Button href={siteConfig.consultationHref} showArrow={false}>
             Book Consultation
             <ArrowRight size={16} />
@@ -81,7 +72,7 @@ export function Navbar() {
 
         <button
           type="button"
-          className="lg:hidden"
+          className={cn("lg:hidden", solid ? "text-ink" : "text-white")}
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
@@ -90,7 +81,7 @@ export function Navbar() {
       </div>
 
       {mobileOpen && (
-        <div className="border-t border-ink/10 bg-cream px-6 py-6 lg:hidden">
+        <div className="border-t border-ink/10 bg-cream px-5 py-6 sm:px-8 lg:hidden">
           <nav className="flex flex-col gap-4">
             {siteConfig.navLinks.map((link) => (
               <Link
@@ -104,13 +95,6 @@ export function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <a
-              href={siteConfig.phoneLink}
-              className="flex items-center gap-2 text-base font-medium text-ink"
-            >
-              <Phone size={16} />
-              {siteConfig.phone}
-            </a>
             <Button href={siteConfig.consultationHref} className="mt-2 w-fit" showArrow={false}>
               Book Consultation
               <ArrowRight size={16} />

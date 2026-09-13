@@ -20,7 +20,7 @@ export function SectionLabel({
   return (
     <p
       className={cn(
-        "mb-4 text-xs font-medium uppercase tracking-[0.2em]",
+        "eyebrow-line mb-4 text-[10px] font-semibold uppercase tracking-[0.22em]",
         colors[variant],
         className
       )}

@@ -1,42 +1,27 @@
 import Link from "next/link";
+import { MessageCircle, Phone, Mail } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { Container } from "@/components/ui/Container";
 import { services } from "@/data/services";
 
-function InstagramIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-    </svg>
-  );
-}
-
-function LinkedinIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-      <rect width="4" height="12" x="2" y="9" />
-      <circle cx="4" cy="4" r="2" />
-    </svg>
-  );
-}
+const PHONE_INTL = "919763691625";
+const PHONE_DISPLAY = "+91 97636 91625";
+const EMAIL = "infrachouhan@gmail.com";
 
 export function Footer() {
   return (
-    <footer className="border-t border-ink/10 bg-cream py-16">
+    <footer className="border-t border-white/10 bg-forest py-16 text-white">
       <Container>
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div>
-            <Link href="/" className="font-display text-xl font-bold text-ink">
+            <Link href="/" className="font-display text-2xl font-medium text-white">
               {siteConfig.name}
             </Link>
-            <p className="mt-3 text-sm italic text-muted">{siteConfig.tagline}</p>
+            <p className="mt-3 max-w-xs text-sm leading-relaxed text-white/60">{siteConfig.tagline}</p>
           </div>
 
           <div>
-            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-ink">
+            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white/50">
               Services
             </h4>
             <ul className="space-y-2">
@@ -44,7 +29,7 @@ export function Footer() {
                 <li key={service.slug}>
                   <Link
                     href={`/services#${service.slug}`}
-                    className="text-sm text-muted transition-colors hover:text-gold"
+                    className="text-sm text-white/60 transition-colors hover:text-gold"
                   >
                     {service.title}
                   </Link>
@@ -54,22 +39,22 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-ink">
+            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white/50">
               Company
             </h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/process" className="text-sm text-muted hover:text-gold">
+                <Link href="/process" className="text-sm text-white/60 hover:text-gold">
                   Process
                 </Link>
               </li>
               <li>
-                <Link href="/why-us" className="text-sm text-muted hover:text-gold">
+                <Link href="/why-us" className="text-sm text-white/60 hover:text-gold">
                   Why Us
                 </Link>
               </li>
               <li>
-                <Link href="/projects" className="text-sm text-muted hover:text-gold">
+                <Link href="/projects" className="text-sm text-white/60 hover:text-gold">
                   Projects
                 </Link>
               </li>
@@ -77,49 +62,55 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-ink">
+            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white/50">
               Contact
             </h4>
-            <ul className="space-y-2 text-sm text-muted">
-              <li>
-                <a href={siteConfig.phoneLink} className="hover:text-gold">
-                  {siteConfig.phone}
-                </a>
-              </li>
-              <li>
-                <a href={siteConfig.emailLink} className="hover:text-gold">
-                  {siteConfig.email}
-                </a>
-              </li>
-              <li>{siteConfig.address}</li>
-            </ul>
+            <p className="max-w-xs text-sm leading-relaxed text-white/60">
+              For new project enquiries, use the consultation form and share a little about your brief.
+            </p>
+            <Link
+              href="/contact"
+              className="mt-4 inline-flex text-[11px] font-semibold uppercase tracking-[0.14em] text-gold hover:text-white"
+            >
+              Start an enquiry
+            </Link>
+
+            <div className="mt-5 flex flex-col gap-2.5">
+              <a
+                href={`https://wa.me/${PHONE_INTL}?text=${encodeURIComponent(
+                  "Hi, I'm interested in discussing a project with Chouhan Infraspaces."
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm text-white/60 transition-colors hover:text-gold"
+              >
+                <MessageCircle size={15} />
+                WhatsApp
+              </a>
+
+              <a
+                href={`tel:+${PHONE_INTL}`}
+                className="flex items-center gap-2 text-sm text-white/60 transition-colors hover:text-gold"
+              >
+                <Phone size={15} />
+                {PHONE_DISPLAY}
+              </a>
+
+              <a
+                href={`mailto:${EMAIL}`}
+                className="flex items-center gap-2 text-sm text-white/60 transition-colors hover:text-gold"
+              >
+                <Mail size={15} />
+                {EMAIL}
+              </a>
+            </div>
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-ink/10 pt-8 sm:flex-row">
-          <p className="text-sm text-muted">
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row">
+          <p className="text-sm text-white/50">
             &copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
           </p>
-          <div className="flex gap-4">
-            <a
-              href={siteConfig.social.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted transition-colors hover:text-gold"
-              aria-label="Instagram"
-            >
-              <InstagramIcon />
-            </a>
-            <a
-              href={siteConfig.social.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted transition-colors hover:text-gold"
-              aria-label="LinkedIn"
-            >
-              <LinkedinIcon />
-            </a>
-          </div>
         </div>
       </Container>
     </footer>

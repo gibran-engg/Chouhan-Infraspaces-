@@ -9,18 +9,20 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        cream: "#FAF7F1",
-        ink: "#171717",
-        muted: "#6B6B6B",
-        gold: "#C8A876",
-        overlay: "#0A0A0A",
+        cream: "#F8F6F1",
+        ink: "#241C18",
+        muted: "#716861",
+        gold: "#BE8A4E",
+        sand: "#E8DED0",
+        forest: "#3B2921",
+        overlay: "#211714",
       },
       fontFamily: {
-        display: ["var(--font-fraunces)", "Georgia", "serif"],
+        display: ["var(--font-inter)", "system-ui", "sans-serif"],
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
       },
       maxWidth: {
-        content: "1400px",
+        content: "1440px",
       },
       keyframes: {
         marquee: {

@@ -10,23 +10,21 @@ import { CTA } from "@/components/sections/CTA";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Interior design, construction, renovation, turnkey solutions, and maintenance — one premium partner from design to delivery.",
+    "Explore Chouhan Infraspaces interior design, construction, finish work and turnkey project capabilities.",
 };
 
 export default function ServicesPage() {
   return (
     <>
-      <section className="bg-cream pt-32 pb-12">
+      <section className="bg-forest pb-16 pt-32 text-white md:pb-20 md:pt-40">
         <Container>
           <FadeIn>
             <SectionLabel>What We Do</SectionLabel>
-            <h1 className="font-display text-4xl font-bold text-ink md:text-5xl">
-              Our Services
+            <h1 className="max-w-3xl font-display text-5xl font-medium leading-[0.95] tracking-[-0.04em] md:text-7xl">
+              Services shaped around the complete space.
             </h1>
-            <p className="mt-4 max-w-2xl text-muted">
-              From concept to handover, we offer end-to-end design and build
-              services for residential, commercial, and corporate spaces across
-              Mumbai and beyond.
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/70">
+              Interiors, construction, finish work and coordinated delivery—each presented through real project imagery.
             </p>
           </FadeIn>
         </Container>
@@ -45,7 +43,7 @@ export default function ServicesPage() {
               }`}
             >
               <FadeIn className={i % 2 === 1 ? "lg:[direction:ltr]" : ""}>
-                <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
+                <div className="relative aspect-[4/3] overflow-hidden bg-sand">
                   <Image
                     src={service.image}
                     alt={service.title}
@@ -61,7 +59,7 @@ export default function ServicesPage() {
                 className={i % 2 === 1 ? "lg:[direction:ltr]" : ""}
               >
                 <SectionLabel>{service.title}</SectionLabel>
-                <h2 className="font-display text-3xl font-bold text-ink md:text-4xl">
+                  <h2 className="font-display text-4xl font-medium leading-tight tracking-[-0.03em] text-ink md:text-5xl">
                   {service.title}
                 </h2>
                 <div className="mt-6 space-y-4 text-muted">
@@ -72,8 +70,8 @@ export default function ServicesPage() {
                   ))}
                 </div>
 
-                <h3 className="mt-8 font-display text-lg font-bold text-ink">
-                  What&apos;s Included
+                <h3 className="mt-8 font-display text-xl font-medium text-ink">
+                  Scope may include
                 </h3>
                 <ul className="mt-4 space-y-2">
                   {service.included.map((item) => (

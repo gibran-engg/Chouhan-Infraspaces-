@@ -15,87 +15,80 @@ import type { LucideIcon } from "lucide-react";
 export const metadata: Metadata = {
   title: "Process",
   description:
-    "Our five-step design and build process — from consultation and design through approval, execution, and handover.",
+    "A simple view of how a Chouhan Infraspaces project can move from early conversation to finished space.",
 };
 
 const steps: {
   icon: LucideIcon;
   title: string;
   description: string;
-  duration: string;
 }[] = [
   {
     icon: MessageSquare,
     title: "Consultation",
     description:
-      "Site visit, requirement gathering, and budget alignment. We listen first — understanding how you use your space, your priorities, and your timeline before proposing anything.",
-    duration: "1–2 weeks",
+      "Start with the space, the ambitions for it, and the practical questions that will shape the brief.",
   },
   {
     icon: PenTool,
     title: "Design",
     description:
-      "Concept design, 3D renders, and material/finish selection. Every decision is visualized and documented so you know exactly what you're approving before work begins.",
-    duration: "3–6 weeks",
+      "Develop the direction through layouts, finishes, material references and the details that give the project its character.",
   },
   {
     icon: FileCheck,
-    title: "Approval",
+    title: "Alignment",
     description:
-      "BOQ, timeline, and agreement sign-off. Transparent pricing with line-item breakdowns, milestone-based payment schedule, and a signed scope of work.",
-    duration: "1–2 weeks",
+      "Bring the scope, sequence and selected approach into a shared understanding before work moves forward.",
   },
   {
     icon: Hammer,
     title: "Execution",
     description:
-      "Phased construction or renovation with quality checkpoints at every stage. Weekly progress updates, on-site supervision, and immediate escalation of any issues.",
-    duration: "Project dependent",
+      "The site phase turns the agreed direction into a built environment, with material and detail decisions carried into execution.",
   },
   {
     icon: Key,
     title: "Handover",
     description:
-      "Final walkthrough, snagging, and documentation handover. We don't consider a project complete until every item on the snag list is resolved and you have full documentation.",
-    duration: "1 week",
+      "The final space is reviewed as a whole—how it looks, works and feels in use.",
   },
 ];
 
 export default function ProcessPage() {
   return (
     <>
-      <section className="bg-cream pt-32 pb-12">
+      <section className="bg-forest pb-16 pt-32 text-white md:pb-20 md:pt-40">
         <Container>
           <FadeIn>
             <SectionLabel>Our Approach</SectionLabel>
-            <h1 className="font-display text-4xl font-bold text-ink md:text-5xl">
-              How We Work
+            <h1 className="max-w-3xl font-display text-5xl font-medium leading-[0.95] tracking-[-0.04em] md:text-7xl">
+              A clear path from first thought to final space.
             </h1>
-            <p className="mt-4 max-w-2xl text-muted">
-              A structured, transparent process that keeps you informed at every
-              stage — from the first conversation to the final handover.
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/70">
+              A simple framework for bringing direction, site work and finishing decisions together.
             </p>
           </FadeIn>
         </Container>
       </section>
 
-      <section className="pb-20 md:pb-32">
+      <section className="page-content-section">
         <Container>
           <div className="relative mx-auto max-w-3xl">
-            <div className="absolute left-7 top-0 hidden h-full w-px bg-gold/30 md:block" />
+            <div className="absolute left-7 top-0 hidden h-full w-px bg-gold/40 md:block" />
 
             <div className="space-y-12">
               {steps.map((step, i) => (
                 <FadeIn key={step.title} delay={i * 0.1}>
                   <div className="relative flex gap-8">
-                    <div className="relative z-10 flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-gold/40 bg-white">
+                    <div className="relative z-10 flex h-14 w-14 shrink-0 items-center justify-center border border-gold/50 bg-white">
                       <step.icon className="h-6 w-6 text-gold" />
                     </div>
                     <div className="pb-4">
-                      <span className="text-xs font-medium uppercase tracking-wider text-gold">
-                        Step {i + 1} · {step.duration}
+                      <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-gold">
+                        Step {i + 1}
                       </span>
-                      <h2 className="mt-1 font-display text-2xl font-bold text-ink">
+                      <h2 className="mt-2 font-display text-3xl font-medium text-ink">
                         {step.title}
                       </h2>
                       <p className="mt-3 leading-relaxed text-muted">

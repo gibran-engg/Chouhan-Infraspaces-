@@ -5,15 +5,46 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    background: #f8f6f1;
+    scroll-padding-top: 5.5rem;
   }
 
   body {
     @apply bg-cream text-ink font-sans antialiased;
+    text-rendering: optimizeLegibility;
   }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
+  }
+
+  ::selection { @apply bg-gold text-white; }
+  a, button, input, select, textarea { -webkit-tap-highlight-color: transparent; }
+  :focus-visible { @apply outline-none ring-2 ring-gold ring-offset-2 ring-offset-cream; }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+
+  .grain {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E");
+  }
+
+  .eyebrow-line::before { content: ""; @apply mr-3 inline-block h-px w-8 align-middle bg-current; }
+
+  .hero-sheen { background: linear-gradient(115deg, transparent 32%, rgb(255 255 255 / 0.13) 47%, transparent 62%); background-size: 220% 100%; animation: sheen 8s ease-in-out infinite; }
+}
+
+@layer components {
+  .page-content-section {
+    @apply pt-12 pb-20 md:pt-16 md:pb-32;
+  }
+}
+
+@keyframes sheen { 0%, 35% { background-position: 130% 0; } 65%, 100% { background-position: -100% 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
 }
